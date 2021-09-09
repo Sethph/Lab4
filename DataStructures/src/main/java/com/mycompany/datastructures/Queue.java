@@ -38,5 +38,9 @@ public class Queue {
         return index == 0;
     }
     
+    public int peek(){
+        return queue[0];
+    }
+    
     
 }
