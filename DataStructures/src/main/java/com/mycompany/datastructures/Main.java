@@ -21,7 +21,7 @@ public class Main {
             val = sc.nextInt();
         }
         
-        while(!queue.ifEmpty()){
+        while(!queue.isEmpty()){
             System.out.printf("Got: %d%n", queue.get());
         }
     }
