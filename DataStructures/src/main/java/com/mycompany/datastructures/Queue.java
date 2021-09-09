@@ -19,11 +19,17 @@ public class Queue {
     }
     
     public void append(int value){
+        if(isFull()){
+            throw new QueueException("Queue is full");
+        }
         queue[index] = value;
         index++;
     }
     
     public int get(){
+        if(isEmpty()){
+            throw new QueueException("Queue is empty");
+        }
         index--;
         int getValue = queue[0];
         System.arraycopy(queue, 1, queue, 0, index);
@@ -34,7 +40,7 @@ public class Queue {
         return index == queue.length;
     }
     
-    public boolean ifEmpty(){
+    public boolean isEmpty(){
         return index == 0;
     }
     
