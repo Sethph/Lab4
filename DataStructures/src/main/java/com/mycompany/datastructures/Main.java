@@ -17,9 +17,6 @@ public class Main {
         Queue queue = new Queue(5);
         int val = sc.nextInt();
         while(val != 0){
-            if(queue.isFull()){
-                System.out.printf("Got: %d%n", queue.get());
-            }
             queue.append(val);
             val = sc.nextInt();
         }
